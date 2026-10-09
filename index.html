@@ -1,98 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Privacy Policy for Overtime Tracker BD by Tatisaki Labs.">
-<title>Privacy Policy - Overtime Tracker BD</title>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.7;
-  max-width: 850px;
-  margin: auto;
-  padding: 24px;
-  color: #222;
-  background: #f7f9fc;
-}
-main {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-}
-h1, h2 { color: #155eef; }
-a { color: #155eef; }
-footer {
-  margin-top: 30px;
-  border-top: 1px solid #ddd;
-  padding-top: 15px;
-  font-size: 14px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Overtime Tracker BD</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; }
+        .header { background: #ffffff; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .toggle-container { display: inline-flex; border-radius: 20px; overflow: hidden; border: 1px solid #ccc; }
+        .toggle-btn { padding: 8px 20px; border: none; cursor: pointer; background: #fff; font-weight: bold; font-size: 14px; transition: 0.3s; }
+        .toggle-btn.active { background: #1a2b4c; color: #fff; }
+        .container { max-width: 800px; margin: 20px auto; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h1 { color: #1a2b4c; font-size: 22px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { color: #1a2b4c; font-size: 18px; margin-top: 25px; }
+        a { color: #007bff; text-decoration: none; word-break: break-all; }
+        a:hover { text-decoration: underline; }
+        ul, ol { padding-left: 20px; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .footer { text-align: center; font-size: 12px; color: #777; margin-top: 20px; margin-bottom: 30px; }
+    </style>
 </head>
 <body>
-<main>
 
-<h1>Privacy Policy</h1>
-<p><strong>Application:</strong> Overtime Tracker BD</p>
-<p><strong>Developer:</strong> Tatisaki Labs</p>
-<p><strong>Effective Date:</strong> October 9, 2026</p>
+    <!-- Language Toggle Header -->
+    <div class="header">
+        <div class="toggle-container">
+            <button id="btn-bn" class="toggle-btn active" onclick="switchLang('bn')">বাংলা</button>
+            <button id="btn-en" class="toggle-btn" onclick="switchLang('en')">English</button>
+        </div>
+    </div>
 
-<h2>1. Introduction</h2>
-<p>Tatisaki Labs ("we", "our", or "us") operates Overtime Tracker BD. This Privacy Policy explains how information is collected, used, stored, and protected when you use our application.</p>
+    <div class="container">
+        
+        <!-- ================= BANGLA CONTENT ================= -->
+        <div id="content-bn" class="lang-content active">
+            <h1>গোপনীয়তা নীতি - Overtime Tracker BD</h1>
+            <p><strong>সর্বশেষ আপডেট:</strong> ৯ অক্টোবর, ২০২৬</p>
+            <p>এই গোপনীয়তা নীতিতে বর্ণনা করা হয়েছে কিভাবে <strong>Tatisaki Labs</strong> ("আমরা") আপনার ব্যক্তিগত তথ্য সংগ্রহ, ব্যবহার এবং শেয়ার করে যখন আপনি <strong>Overtime Tracker BD</strong> মোবাইল অ্যাপ্লিকেশনটি (সংক্ষেপে "অ্যাপ") ব্যবহার করেন।</p>
 
-<h2>2. Information We Collect</h2>
-<p>Depending on your use of the application, the following information may be processed:</p>
-<ul>
-<li><strong>Account information:</strong> Name, email address, and authentication identifiers associated with Google Sign-In and Firebase Authentication.</li>
-<li><strong>Employment information:</strong> Salary details, attendance records, overtime hours, overtime earnings, bonuses, and other information you enter into the application.</li>
-<li><strong>Application data:</strong> Records and settings you create or save while using the application.</li>
-</ul>
+            <h2>১. আমরা কি তথ্য সংগ্রহ করি</h2>
+            <ul>
+                <li><strong>ব্যক্তিগত তথ্য:</strong> নাম, ইমেইল, কোম্পানি/ফ্যাক্টরির নাম, কর্মীর আইডি, গ্রেড এবং পদবি।</li>
+                <li><strong>আর্থিক ও কাজের তথ্য:</strong> মূল বেতন, বাড়িভাড়া, চিকিৎসা ভাতা, খাদ্য ভাতা, নাইট বিল, টিফিন বিল, হাজিরা বোনাস, ওভারটাইম এবং পিস রেট।</li>
+                <li><strong>লগইন তথ্য:</strong> গুগল দিয়ে সাইন-ইন করলে আমরা আপনার নাম, ইমেইল এবং প্রোফাইল ছবি পেয়ে থাকি।</li>
+            </ul>
 
-<h2>3. How We Use Information</h2>
-<p>Information is used to:</p>
-<ul>
-<li>Authenticate users and manage accounts.</li>
-<li>Calculate salary, overtime earnings, and attendance.</li>
-<li>Store and synchronize records associated with user accounts.</li>
-<li>Support data retrieval and restoration where available.</li>
-<li>Maintain application security and reliability.</li>
-</ul>
+            <h2>২. তথ্যের ব্যবহার</h2>
+            <p>আমরা সংগৃহীত তথ্য <strong>শুধুমাত্র অ্যাপের মূল কার্যকারিতা পরিচালনার জন্য</strong> ব্যবহার করি। যেমন:</p>
+            <ul>
+                <li>আপনার ওভারটাইম এবং মোট বেতন হিসাব করা।</li>
+                <li>আপনার কাজ এবং বেতনের রেকর্ড সংরক্ষণ ও প্রদর্শন করা।</li>
+                <li>লগইন থাকলে বিভিন্ন ডিভাইসে ডেটা সিঙ্ক করা।</li>
+            </ul>
+            <p>আমরা বিজ্ঞাপন বা মার্কেটিংয়ের জন্য আপনার ডেটা ব্যবহার করি <strong>না</strong>।</p>
 
-<h2>4. Data Storage and Third-Party Services</h2>
-<p>The application uses Google Sign-In, Firebase Authentication, and Cloud Firestore to provide account authentication and data storage. Information handled by these services is also subject to the applicable policies of Google and Firebase.</p>
-<ul>
-<li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-<li><a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a></li>
-</ul>
+            <h2>৩. তথ্য সংরক্ষণ ও শেয়ারিং</h2>
+            <ul>
+                <li><strong>ক্লাউড স্টোরেজ:</strong> আপনার ডেটা <strong>Google Firebase Firestore</strong>-এ সংরক্ষিত থাকে।</li>
+                <li><strong>লোকাল স্টোরেজ:</strong> অফলাইনে ব্যবহারের জন্য ডেটার একটি কপি আপনার ফোনের <strong>Room Database</strong>-এও থাকে।</li>
+                <li><strong>শেয়ারিং:</strong> আমরা কোনো তৃতীয় পক্ষের সাথে আপনার ব্যক্তিগত ডেটা বিক্রি বা শেয়ার করি না (শুধুমাত্র Firebase ছাড়া)।</li>
+            </ul>
 
-<h2>5. Data Sharing</h2>
-<p>We do not sell users' personal information. Information may be processed by Google and Firebase as necessary to provide authentication, database storage, and related services. We do not intentionally share employment records with unrelated third parties for their own marketing.</p>
+            <h2>৪. ডেটা সিকিউরিটি</h2>
+            <ul>
+                <li>Firebase-এ ডেটা পাঠানোর সময় HTTPS/SSL এনক্রিপশন ব্যবহার করা হয়।</li>
+                <li>Firebase সিকিউরিটি রুলসের মাধ্যমে শুধু আপনার অ্যাকাউন্ট থেকেই ডেটা অ্যাক্সেস করা যায়।</li>
+                <li>নিরাপদ লগইনের জন্য Google Sign-In ব্যবহার করা হয়।</li>
+            </ul>
 
-<h2>6. Data Security</h2>
-<p>We use appropriate technical measures and available Firebase security features to help protect information. However, no electronic storage or transmission system can be guaranteed to be completely secure.</p>
+            <h2>৫. ডেটা রিটেনশন এবং ডিলিট</h2>
+            <p>অ্যাকাউন্ট অ্যাক্টিভ থাকা পর্যন্ত ডেটা সংরক্ষিত থাকে। আপনি চাইলে যেকোনো সময় অ্যাকাউন্ট ডিলিটের অনুরোধ করতে পারেন:</p>
+            <ol>
+                <li>আমাদের অ্যাকাউন্ট ডিলিট পেজে গিয়ে: <a href="https://mahmudappsofficial-072.github.io/overtime-tracker-bd-account-deletion/">Account Deletion Page</a></li>
+                <li>অথবা ইমেইল করে: <a href="mailto:mahmudappsofficial-072@gmail.com">mahmudappsofficial-072@gmail.com</a></li>
+            </ol>
+            <p>অনুরোধ পাওয়ার ৩০ দিনের মধ্যে আপনার ডেটা মুছে ফেলা হবে।</p>
 
-<h2>7. Data Retention and Account Deletion</h2>
-<p>You may request account and associated data deletion by emailing us at <a href="mailto:supporttatisakilabs@gmail.com">supporttatisakilabs@gmail.com</a>.</p>
-<p>Please include "Overtime Tracker BD Account Deletion Request" in the subject line and provide the email address associated with your account. We may request reasonable verification before processing the request.</p>
-<p>We will review and process valid requests and delete associated personal data, subject to applicable legal obligations. Deleting an authentication account alone may not automatically delete all associated database records; we will address applicable associated data as part of the deletion process.</p>
+            <h2>৬. শিশুদের গোপনীয়তা</h2>
+            <p>এই অ্যাপটি <strong>১৮ বছর বা তার বেশি বয়সীদের</strong> জন্য তৈরি। আমরা জেনে-শুনে ১৮ বছরের কম বয়সীদের তথ্য সংগ্রহ করি না।</p>
 
-<h2>8. Children's Privacy</h2>
-<p>The application is not specifically designed for children. We do not knowingly seek to collect personal information from children in violation of applicable laws.</p>
+            <h2>৭. যোগাযোগ</h2>
+            <p>কোনো প্রশ্ন থাকলে যোগাযোগ করুন: <a href="mailto:mahmudappsofficial-072@gmail.com">mahmudappsofficial-072@gmail.com</a></p>
+        </div>
 
-<h2>9. Changes to This Privacy Policy</h2>
-<p>We may update this Privacy Policy when our application or data practices change. The updated policy will be published at this URL with a revised effective date when appropriate.</p>
+        <!-- ================= ENGLISH CONTENT ================= -->
+        <div id="content-en" class="lang-content">
+            <h1>Privacy Policy - Overtime Tracker BD</h1>
+            <p><strong>Last updated:</strong> October 9, 2026</p>
+            <p>This Privacy Policy describes how <strong>Tatisaki Labs</strong> ("we," "our," or "us") collects, uses, and shares your personal information when you use the <strong>Overtime Tracker BD</strong> mobile application (the "App").</p>
 
-<h2>10. Contact Us</h2>
-<p>If you have questions about this Privacy Policy or wish to request deletion of your account and associated data, contact:</p>
-<p><strong>Tatisaki Labs</strong><br>
-Overtime Tracker BD<br>
-Email: <a href="mailto:supporttatisakilabs@gmail.com">supporttatisakilabs@gmail.com</a></p>
+            <h2>1. Information We Collect</h2>
+            <ul>
+                <li><strong>Personal Information:</strong> Name, email address, company/factory name, employee ID, grade, and job position.</li>
+                <li><strong>Financial & Work Data:</strong> Basic salary, house rent, medical allowance, food allowance, night bill, tiffin bill, attendance bonus, overtime hours, and piece rate.</li>
+                <li><strong>Authentication Data:</strong> When you sign in with Google, we receive your basic profile information (name, email address, and profile picture).</li>
+            </ul>
 
-<footer>
-<p>© 2026 Tatisaki Labs. All rights reserved.</p>
-</footer>
+            <h2>2. How We Use Your Information</h2>
+            <p>We use the collected data <strong>solely to operate and provide the core functionality of the App</strong>, including:</p>
+            <ul>
+                <li>Calculating overtime pay and total salary based on your inputs.</li>
+                <li>Storing and displaying your work and salary records.</li>
+                <li>Syncing your data across devices when you are logged in.</li>
+            </ul>
+            <p>We do <strong>not</strong> use your data for advertising or marketing purposes.</p>
 
-</main>
+            <h2>3. How We Store and Share Your Information</h2>
+            <ul>
+                <li><strong>Cloud Storage:</strong> Your data is stored in <strong>Google Firebase Firestore</strong>.</li>
+                <li><strong>Local Storage:</strong> A copy of your data is stored locally on your phone using <strong>Room Database</strong> for offline access.</li>
+                <li><strong>Sharing:</strong> We do <strong>not</strong> sell or share your personal data with any third parties, except as required to provide the App's functionality (i.e., Firebase).</li>
+            </ul>
+
+            <h2>4. Data Security</h2>
+            <ul>
+                <li>All data sent to and from Firebase is encrypted using HTTPS/SSL protocols.</li>
+                <li>Access to your data in Firestore is restricted to your authenticated account only via Firebase Security Rules.</li>
+                <li>We use Google Sign-In, which provides a secure authentication mechanism.</li>
+            </ul>
+
+            <h2>5. Data Retention and Deletion</h2>
+            <p>We retain your data as long as your account is active. You can request deletion at any time by:</p>
+            <ol>
+                <li>Visiting our Account Deletion page: <a href="https://mahmudappsofficial-072.github.io/overtime-tracker-bd-account-deletion/">Account Deletion Page</a></li>
+                <li>Emailing us at: <a href="mailto:mahmudappsofficial-072@gmail.com">mahmudappsofficial-072@gmail.com</a></li>
+            </ol>
+            <p>Upon receiving your request, we will delete your data within 30 days.</p>
+
+            <h2>6. Children's Privacy</h2>
+            <p>Our App is intended for users aged <strong>18 and older</strong>. We do not knowingly collect personal information from children under 18.</p>
+
+            <h2>7. Contact Us</h2>
+            <p>If you have any questions, contact us at: <a href="mailto:mahmudappsofficial-072@gmail.com">mahmudappsofficial-072@gmail.com</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        &copy; 2026 Tatisaki Labs. All rights reserved.
+    </div>
+
+    <!-- JavaScript for Language Toggle -->
+    <script>
+        function switchLang(lang) {
+            // Hide all contents
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            // Remove active class from all buttons
+            document.querySelectorAll('.toggle-btn').forEach(el => el.classList.remove('active'));
+            
+            // Show selected content and set button active
+            document.getElementById('content-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
 </body>
 </html>
