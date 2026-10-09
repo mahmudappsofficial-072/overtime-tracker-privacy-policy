@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Account — Tatisaki Labs</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #202124;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    }
+
+    .language {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    button {
+      border: none;
+      border-radius: 8px;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .lang-btn {
+      background: #eeeeee;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .notice {
+      background: #f1f6ff;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+    label {
+      display: block;
+      margin-top: 18px;
+      margin-bottom: 7px;
+      font-weight: 600;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d0d5dd;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .checkbox {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 20px 0;
+      line-height: 1.5;
+    }
+
+    .checkbox input {
+      width: auto;
+      margin-top: 4px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: #1a73e8;
+      color: white;
+      font-weight: bold;
+      padding: 13px;
+    }
+
+    .submit-btn:hover {
+      background: #1557b0;
+    }
+
+    .back {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #1a73e8;
+    }
+
+    .small {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="language">
+    <button class="lang-btn" onclick="toggleLanguage()">
+      🇧🇩 বাংলা / 🇬🇧 English
+    </button>
+  </div>
+
+  <div id="english">
+
+    <h1>Delete Account</h1>
+
+    <div class="notice">
+      If you want to delete your account and associated personal data,
+      please submit an account deletion request using the form below.
+    </div>
+
+    <label for="email">Account Email Address</label>
+    <input
+      type="email"
+      id="email"
+      placeholder="Enter your account email"
+      required
+    >
+
+    <label for="reason">Reason for Deletion (Optional)</label>
+    <textarea
+      id="reason"
+      placeholder="Tell us why you want to delete your account"
+    ></textarea>
+
+    <div class="checkbox">
+      <input type="checkbox" id="confirm">
+      <label for="confirm">
+        I understand that account deletion may permanently remove
+        my account and associated data.
+      </label>
+    </div>
+
+    <button class="submit-btn" onclick="submitRequest()">
+      Submit Deletion Request
+    </button>
+
+    <p class="small">
+      Your request will be sent to our support team for manual review.
+      We may contact you to verify ownership of the account before processing
+      the deletion request.
+    </p>
+
+  </div>
+
+
+  <div id="bangla" style="display:none;">
+
+    <h1>অ্যাকাউন্ট মুছে ফেলার অনুরোধ</h1>
+
+    <div class="notice">
+      আপনি যদি আপনার অ্যাকাউন্ট এবং সংশ্লিষ্ট ব্যক্তিগত তথ্য মুছে ফেলতে চান,
+      তাহলে নিচের ফর্মের মাধ্যমে Account Deletion Request পাঠান।
+    </div>
+
+    <label for="email-bn">অ্যাকাউন্টের ইমেইল ঠিকানা</label>
+    <input
+      type="email"
+      id="email-bn"
+      placeholder="আপনার অ্যাকাউন্টের ইমেইল লিখুন"
+    >
+
+    <label for="reason-bn">মুছে ফেলার কারণ (ঐচ্ছিক)</label>
+    <textarea
+      id="reason-bn"
+      placeholder="আপনি কেন অ্যাকাউন্ট মুছে ফেলতে চান তা লিখতে পারেন"
+    ></textarea>
+
+    <div class="checkbox">
+      <input type="checkbox" id="confirm-bn">
+      <label for="confirm-bn">
+        আমি বুঝতে পারছি যে অ্যাকাউন্ট মুছে ফেললে আমার অ্যাকাউন্ট
+        এবং সংশ্লিষ্ট তথ্য স্থায়ীভাবে মুছে যেতে পারে।
+      </label>
+    </div>
+
+    <button class="submit-btn" onclick="submitRequestBangla()">
+      অ্যাকাউন্ট মুছে ফেলার অনুরোধ পাঠান
+    </button>
+
+    <p class="small">
+      আপনার অনুরোধ আমাদের সাপোর্ট টিমের কাছে যাবে এবং ম্যানুয়ালি পর্যালোচনা
+      করা হবে। অ্যাকাউন্টের মালিকানা যাচাই করার জন্য প্রয়োজনে আপনার সাথে
+      যোগাযোগ করা হতে পারে।
+    </p>
+
+  </div>
+
+  <a class="back" href="index.html">
+    ← Back to Privacy Policy
+  </a>
+
+</div>
+
+
+<script>
+  function toggleLanguage() {
+    const english = document.getElementById("english");
+    const bangla = document.getElementById("bangla");
+
+    if (english.style.display === "none") {
+      english.style.display = "block";
+      bangla.style.display = "none";
+    } else {
+      english.style.display = "none";
+      bangla.style.display = "block";
+    }
+  }
+
+  function submitRequest() {
+    const email = document.getElementById("email").value.trim();
+    const reason = document.getElementById("reason").value.trim();
+    const confirmed = document.getElementById("confirm").checked;
+
+    if (!email) {
+      alert("Please enter your account email address.");
+      return;
+    }
+
+    if (!confirmed) {
+      alert("Please confirm that you understand the deletion process.");
+      return;
+    }
+
+    const subject = encodeURIComponent("Account Deletion Request");
+    const body = encodeURIComponent(
+      "Account Email: " + email +
+      "\n\nReason: " + (reason || "Not provided") +
+      "\n\nI confirm that I want to request deletion of my account."
+    );
+
+    window.location.href =
+      "mailto:supporttatisakilabs@gmail.com?subject=" +
+      subject + "&body=" + body;
+  }
+
+  function submitRequestBangla() {
+    const email = document.getElementById("email-bn").value.trim();
+    const reason = document.getElementById("reason-bn").value.trim();
+    const confirmed = document.getElementById("confirm-bn").checked;
+
+    if (!email) {
+      alert("আপনার অ্যাকাউন্টের ইমেইল ঠিকানা লিখুন।");
+      return;
+    }
+
+    if (!confirmed) {
+      alert("অ্যাকাউন্ট মুছে ফেলার বিষয়টি বুঝেছেন—এটি নিশ্চিত করুন।");
+      return;
+    }
+
+    const subject = encodeURIComponent(
+      "অ্যাকাউন্ট মুছে ফেলার অনুরোধ"
+    );
+
+    const body = encodeURIComponent(
+      "অ্যাকাউন্টের ইমেইল: " + email +
+      "\n\nকারণ: " + (reason || "উল্লেখ করা হয়নি") +
+      "\n\nআমি আমার অ্যাকাউন্ট মুছে ফেলার অনুরোধ করছি।"
+    );
+
+    window.location.href =
+      "mailto:supporttatisakilabs@gmail.com?subject=" +
+      subject + "&body=" + body;
+  }
+</script>
+
+</body>
+</html>
