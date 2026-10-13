@@ -126,6 +126,10 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
+        
+        <!-- ⬇️ এখানে জাভাস্ক্রিপ্ট দিয়ে অটোমেটিক তারিখ বসবে ⬇️ -->
+        <p id="lastUpdated" style="text-align: right; font-size: 0.9em; color: #64748b; margin-top: -10px; margin-bottom: 20px;"></p>
+        <!-- ⬆️ এখানে জাভাস্ক্রিপ্ট দিয়ে অটোমেটিক তারিখ বসবে ⬆️ -->
 
         <p class="intro">Welcome to Overtime BD ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application Overtime BD (Package ID: com.overtime.bd).</p>
 
@@ -212,5 +216,17 @@
             <p><strong>Application ID:</strong> com.overtime.bd</p>
         </div>
     </div>
+
+    <!-- ⬇️ তারিখ অটোমেটিক আপডেট করার জাভাস্ক্রিপ্ট ⬇️ -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const lastModified = new Date(document.lastModified);
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = lastModified.toLocaleDateString('en-US', options);
+            document.getElementById('lastUpdated').innerText = "Last Updated: " + formattedDate;
+        });
+    </script>
+    <!-- ⬆️ তারিখ অটোমেটিক আপডেট করার জাভাস্ক্রিপ্ট ⬆️ -->
+
 </body>
 </html>
